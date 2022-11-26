@@ -1,9 +1,13 @@
 <?php
 
-class Home
+class Home extends Controller
 {
-    public function index($cowok = 'widya',$cewek = 'tania' )
+    public function index()
     {
-        echo "$cowok cinta $cewek ";
+        $data['judul']='Home';
+        //mencari file
+        $this->view('templates/header',$data);
+        $this->view('home/index');
+        $this->view('templates/footer');
     }
 }
