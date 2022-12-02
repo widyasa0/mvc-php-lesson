@@ -7,8 +7,10 @@ class Controller{
         require_once '../app/views/' . $view . '.php';
     }
 
+    //memanggil model
     public function model($model)
     {
-        require_once '../app/model' . $model .'.php';
+        require_once '../app/models/' . $model .'.php';
+        return new $model;
     }
 }

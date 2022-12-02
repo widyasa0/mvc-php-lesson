@@ -18,7 +18,7 @@ class App
         //mengambil controller
         //apabila controller yang diambil itu ada, maka controller itulah yang akan ditampilkan
         //kalau tidak ada, controller yang ditampilkan adalah controller default
-        if (file_exists('../app/controllers/' . $url[0] . '.php')) {
+        if (isset($url[0]) && file_exists('../app/controllers/' . $url[0] . '.php')) {
             $this->controller = $url[0];
             unset($url[0]);
         }
